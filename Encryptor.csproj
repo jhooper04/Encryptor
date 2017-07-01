@@ -77,10 +77,12 @@
     <None Include="app.config" />
     <None Include="Encryptor.ico" />
     <EmbeddedResource Include="Encryptor.png" />
+    <None Include="LICENSE" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AboutForm.resx">

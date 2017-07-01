@@ -1,11 +1,10 @@
 ﻿/*
- * Created by SharpDevelop.
- * User: Jake Hooper
- * Date: 6/29/2017
- * Time: 3:53 PM
+ * Created by Jake Hooper (c) 2017
+ * hosted on GitHum @ https://github.com/jhooper04/Encryptor
  * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ * Encryptor may be freely distributed under the MIT license.
  */
+ 
 using System;
 
 namespace Encryptor.UndoRedo

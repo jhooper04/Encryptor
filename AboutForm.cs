@@ -7,6 +7,7 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -21,15 +22,23 @@ namespace Encryptor
 		public AboutForm()
 		{
 			InitializeComponent();
-			
+
 			System.Reflection.Assembly myAssembly = System.Reflection.Assembly.GetExecutingAssembly();
 	        Stream myStream = myAssembly.GetManifestResourceStream("Encryptor.Encryptor.png");
 	        Image image = Image.FromStream(myStream);
 	        iconPictureBox.Image = image;
 		}
-		void Button1Click(object sender, EventArgs e)
+
+		void OkButtonClick(object sender, EventArgs e)
 		{
 			Close();
 		}
+
+		void IconLinkLabelLinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			ProcessStartInfo sInfo = new ProcessStartInfo(iconLinkLabel.Text);
+			Process.Start(sInfo);
+		}
+
 	}
 }

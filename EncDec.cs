@@ -1,11 +1,12 @@
 ﻿/*
- * Created by SharpDevelop.
- * User: Jake Hooper
- * Date: 6/28/2017
- * Time: 11:24 PM
+ * Created by Jake Hooper (c) 2017
+ * hosted on GitHum @ https://github.com/jhooper04/Encryptor
  * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ * Encryptor may be freely distributed under the MIT license.
+ * 
+ * Encryption routines from: https://www.codeproject.com/Articles/5719/Simple-encrypting-and-decrypting-data-in-C
  */
+ 
 using System;
 using System.IO; 
 using System.Security.Cryptography;

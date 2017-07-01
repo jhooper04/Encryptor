@@ -1,11 +1,10 @@
 ﻿/*
- * Created by SharpDevelop.
- * User: Jake Hooper
- * Date: 6/28/2017
- * Time: 7:17 PM
+ * Created by Jake Hooper (c) 2017
+ * hosted on GitHum @ https://github.com/jhooper04/Encryptor
  * 
- * 
+ * Encryptor may be freely distributed under the MIT license.
  */
+ 
 using System;
 using System.Drawing;
 using System.Windows.Forms;

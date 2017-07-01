@@ -14,12 +14,13 @@ namespace Encryptor
 		/// Designer variable used to keep track of non-visual components.
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button okButton;
 		private System.Windows.Forms.PictureBox iconPictureBox;
 		private System.Windows.Forms.Label titleLabel;
 		private System.Windows.Forms.Label detailsLabel;
 		private System.Windows.Forms.Label infoLabel;
 		private System.Windows.Forms.Label versionLabel;
+		private System.Windows.Forms.LinkLabel iconLinkLabel;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -42,24 +43,25 @@ namespace Encryptor
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.button1 = new System.Windows.Forms.Button();
+			this.okButton = new System.Windows.Forms.Button();
 			this.iconPictureBox = new System.Windows.Forms.PictureBox();
 			this.titleLabel = new System.Windows.Forms.Label();
 			this.detailsLabel = new System.Windows.Forms.Label();
 			this.infoLabel = new System.Windows.Forms.Label();
 			this.versionLabel = new System.Windows.Forms.Label();
+			this.iconLinkLabel = new System.Windows.Forms.LinkLabel();
 			((System.ComponentModel.ISupportInitialize)(this.iconPictureBox)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// button1
+			// okButton
 			// 
-			this.button1.Location = new System.Drawing.Point(431, 226);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 0;
-			this.button1.Text = "OK";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.Button1Click);
+			this.okButton.Location = new System.Drawing.Point(431, 184);
+			this.okButton.Name = "okButton";
+			this.okButton.Size = new System.Drawing.Size(75, 23);
+			this.okButton.TabIndex = 0;
+			this.okButton.Text = "OK";
+			this.okButton.UseVisualStyleBackColor = true;
+			this.okButton.Click += new System.EventHandler(this.OkButtonClick);
 			// 
 			// iconPictureBox
 			// 
@@ -85,15 +87,15 @@ namespace Encryptor
 			this.detailsLabel.Name = "detailsLabel";
 			this.detailsLabel.Size = new System.Drawing.Size(319, 101);
 			this.detailsLabel.TabIndex = 3;
-			this.detailsLabel.Text = "label2";
+			this.detailsLabel.Text = "Notepad clone that saves/loads encrypted text files.";
 			// 
 			// infoLabel
 			// 
 			this.infoLabel.Location = new System.Drawing.Point(13, 184);
 			this.infoLabel.Name = "infoLabel";
-			this.infoLabel.Size = new System.Drawing.Size(493, 39);
+			this.infoLabel.Size = new System.Drawing.Size(89, 23);
 			this.infoLabel.TabIndex = 4;
-			this.infoLabel.Text = "label3";
+			this.infoLabel.Text = "Icon provided by:";
 			// 
 			// versionLabel
 			// 
@@ -102,19 +104,30 @@ namespace Encryptor
 			this.versionLabel.Name = "versionLabel";
 			this.versionLabel.Size = new System.Drawing.Size(127, 23);
 			this.versionLabel.TabIndex = 5;
-			this.versionLabel.Text = "v0.5";
+			this.versionLabel.Text = "v0.1";
+			// 
+			// iconLinkLabel
+			// 
+			this.iconLinkLabel.Location = new System.Drawing.Point(98, 184);
+			this.iconLinkLabel.Name = "iconLinkLabel";
+			this.iconLinkLabel.Size = new System.Drawing.Size(165, 23);
+			this.iconLinkLabel.TabIndex = 6;
+			this.iconLinkLabel.TabStop = true;
+			this.iconLinkLabel.Text = "http://www.doublejdesign.co.uk";
+			this.iconLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.IconLinkLabelLinkClicked);
 			// 
 			// AboutForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(518, 257);
+			this.ClientSize = new System.Drawing.Size(518, 217);
+			this.Controls.Add(this.iconLinkLabel);
 			this.Controls.Add(this.versionLabel);
 			this.Controls.Add(this.infoLabel);
 			this.Controls.Add(this.detailsLabel);
 			this.Controls.Add(this.titleLabel);
 			this.Controls.Add(this.iconPictureBox);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.okButton);
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "AboutForm";

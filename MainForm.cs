@@ -1,12 +1,10 @@
 ﻿/*
- * Created by SharpDevelop.
- * User: Jake Hooper
- * Date: 6/28/2017
- * Time: 7:01 PM
+ * Created by Jake Hooper (c) 2017
+ * hosted on GitHum @ https://github.com/jhooper04/Encryptor
  * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- * Icon From: http://www.doublejdesign.co.uk
+ * Encryptor may be freely distributed under the MIT license.
  */
+ 
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -89,16 +87,16 @@ namespace Encryptor
 				                "Decryption failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					return;
 				}
-				
+
 				if (fileText.StartsWith(encryptionSignature, StringComparison.InvariantCulture)) {
-				
+
 					keyphraseForm = new KeyForm();
-					
+
 					if (keyphraseForm.ShowDialog() == DialogResult.OK)
 						OpenFile(mainOpenFileDialog.FileName, keyphraseForm.keyphrase, fileText.Remove(0, encryptionSignature.Length));
-					
+
 				} else {
-					
+
 					currentFileName = Path.GetFileName(mainOpenFileDialog.FileName);
 					currentFilePath = Path.GetDirectoryName(mainOpenFileDialog.FileName);
 					currentKey = "";
@@ -110,19 +108,19 @@ namespace Encryptor
 			}
 				
 		}
-		
+
 		void ExitToolStripMenuItemClick(object sender, EventArgs e)
 		{
 			this.Close();
 		}
-		
+
 		void MainTextBoxTextChanged(object sender, EventArgs e)
 		{
 			fileChanged = true;
 			this.Text = currentFileName + " - Encryptor - Unsaved";
 			UpdateEditMenuitems();
 		}
-		
+
 		void MainTextBoxMouseClick(object sender, MouseEventArgs e)
 		{
 			UpdateEditMenuitems();
